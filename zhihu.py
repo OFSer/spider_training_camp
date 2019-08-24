@@ -12,7 +12,7 @@ class ZhihuRecommend:
 
     def get_page_data(self):
         headers = {
-                'cookie': '_zap=43eaded6-a732-4ee7-85b4-c7ac8c2614c5; d_c0="ABDnkMYHMQ-PTui_mptmfL3t4WcTSx9KIug=|1553768410"; _xsrf=Zgy0cAoMKmR8LXorsOrwWH9688apvRiV; z_c0="2|1:0|10:1554286165|4:z_c0|92:Mi4xOGdxRUFnQUFBQUFBRU9lUXhnY3hEeVlBQUFCZ0FsVk5WZFNSWFFBMTBWX1F5Q1gyUHl5dF9KM0J2Z0Vhc01udzdR|3e8f2f8fa63645be91387e6b259b8dfdc6dd278f9c99a010b500b2c860a1e49b"; q_c1=77ff3c79cc414cd6980fc4df6367c896|1563535619000|1556448479000; tst=r; __utma=51854390.1825543909.1565075465.1565075465.1565075465.1; __utmz=51854390.1565075465.1.1.utmcsr=zhihu.com|utmccn=(referral)|utmcmd=referral|utmcct=/people/napoleon-lee/collections; __utmv=51854390.100-1|2=registration_date=20160124=1^3=entry_date=20160124=1; tgw_l7_route=66cb16bc7f45da64562a077714739c11',
+                'cookie': '_zap=43eaded6-a732-4ee7-85b4-c7ac8c2614c5; d_c0="ABDnkMYHMQ-PTui_mptmfL3t4WcTSx9KIug=|1553768410"; _xsrf=Zgy0cAoMKmR8LXorsOrwWH9688apvRiV; z_c0="2|1:0|10:1554286165|4:z_c0|92:Mi4xOGdxRUFnQUFBQUFBRU9lUXhnY3hEeVlBQUFCZ0FsVk5WZFNSWFFBMTBWX1F5Q1gyUHl5dF9KM0J2Z0Vhc01udzdR|3e8f2f8fa63645be91387e6b259b8dfdc6dd278f9c99a010b500b2c860a1e49b"; q_c1=77ff3c79cc414cd6980fc4df6367c896|1563535619000|1556448479000; tst=r; __utma=51854390.1825543909.1565075465.1565075465.1565075465.1; __utmz=51854390.1565075465.1.1.utmcsr=zhihu.com|utmccn=(referral)|utmcmd=referral|utmcct=/people/napoleon-lee/collections; __utmv=51854390.100-1|2=registration_date=20160124=1^3=entry_date=20160124=1; tgw_l7_route=66cb11',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'
                 }
         params = {
