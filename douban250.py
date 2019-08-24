@@ -49,7 +49,6 @@ class Doubanfilm:
                 tmp_dict["主演"] = names
                 tmp_dict["评分"] = movie_info[i]['rating']['average']
                 rows.append(tmp_dict)
-        print (rows)
         return rows
 
     def csv(self):
