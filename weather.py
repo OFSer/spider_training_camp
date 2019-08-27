@@ -3,7 +3,6 @@ import json
 import requests
 from http import HTTPStatus
 
-
 class Weather:
     DEFAULT_KEY = "bb18bc76597a48e5ac978ea7aac9448b"
     DEFAULT_URL = "https://free-api.heweather.com"
@@ -113,23 +112,38 @@ class Weather:
                        1. 当前天气状况
                        2. 当前生活指数
                        3. 未来两天天气预报
+                       4. 退出
                        """)
                 s = input("请选择你要查询的类型:")
                 if s:
                     s = int(s)
-                    if s in list(select.keys()):
+                    if s == 4:
+                        print ("已退出，感谢使用^_^。")
+                        sys.exit(0)
+                    elif s in list(select.keys()):
                         if select[s] == 'now':
                             self.now_weather(select[s], inquire)
                         elif select[s] == 'forecast':
                             self.forecast_weather(select[s], inquire)
                         elif select[s] == 'lifestyle':
                             self.lifestyle_weather(select[s], inquire)
-                        continue_query = input("你是否想要继续查询?(Y/N) ")
-                        if continue_query.lower() == "y":
-                            break
+                        continue_query = input("是否想要继续查询当前城市天气信息?(Y/N) ")
+                        if continue_query.lower() == "y" or continue_query == "":
+                            continue
+                        elif continue_query == "n":
+                            print ("已退出当前城市信息查询。")
+                            continue_query_city = input("是否想要重新查询城市天气信息?(Y/N)")
+                            if continue_query_city.lower() == "y" or continue_query_city.lower() == "" :
+                                break
+                            elif continue_query_city.lower() == "n":
+                                print ("已退出，感谢使用^_^。")
+                                sys.exit(0)
+                            else:
+                                print ("无法识别你的输入,已跳转至查询城市页面...")
+                                break
                         else:
-                            print ("已退出，欢迎再次使用！")
-                            sys.exit(0)
+                            print ("无法识别你的输入,跳转至当前城市信息查询页面...")
+                            continue
                     else:
                         print ("你查询的类型不在选择范围内,请重新输入。")
                         continue
