@@ -30,7 +30,7 @@ class Weather:
             print ("当前时间：{}".format(info['update']['loc']))
             print ("天气状况：{}".format(info['now']['cond_txt']))
             print ("体感温度：{}℃".format(info['now']['fl']))
-            print ("室外温度：{}℃".format(info['now']['tmp']))
+            print ("实际温度：{}℃".format(info['now']['tmp']))
             print ("相对湿度：{}".format(info['now']['hum']))
             print ("大气压强：{}".format(info['now']['pres']))
             print ("风向:{}".format(info['now']['wind_dir']))
