@@ -29,7 +29,7 @@ class Doubanfilm:
 
     def get_douban_top_data(self):
         rows = []
-        for page in range(13):
+        for page in range(0, 250, 20):
             params = {
                         'start': page,
                         'apikey': self.key
