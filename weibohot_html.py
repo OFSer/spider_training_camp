@@ -23,6 +23,7 @@ class Weibohtml:
         os.makedirs('./weibo/', exist_ok=True)
         ##method1: Don't worry about coding issues.
         #with open("./weibo/weibohot.html", 'wb') as f:
+        #    f.write(weibo_html)
 
         ##method2: Add utf-8.
         with open("./weibo/weibohot.html", 'w', encoding='utf-8') as f:
