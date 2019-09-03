@@ -21,7 +21,11 @@ class Weibohtml:
     def download_html(self):
         weibo_html = self.get_weibotext()
         os.makedirs('./weibo/', exist_ok=True)
-        with open("./weibo/weibohot.html", 'w') as f:
+        ##method1: Don't worry about coding issues.
+        #with open("./weibo/weibohot.html", 'wb') as f:
+
+        ##method2: Add utf-8.
+        with open("./weibo/weibohot.html", 'w', encoding='utf-8') as f:
             f.write(weibo_html)
 
     def run(self):
