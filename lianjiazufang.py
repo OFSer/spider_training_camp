@@ -29,7 +29,7 @@ class LianjiaZufang:
         zufang_hosttype_list  = tree.xpath('//div[@class="content__list--item"]//div//p[2]/text()[7]')
         num = len(zufang_info_list)
         for i in range(num):
-            info_tuple = (zufang_info_list[i],zufang_imgs_list[i],zufang_link_list[i],
+            info_tuple = (zufang_info_list[i],zufang_imgs_list[i],"https://sh.lianjia.com{0}".format(zufang_link_list[i]),
                           zufang_zone_list[i],zufang_space_list[i],zufang_direction_list[i],
                           zufang_hosttype_list[i]
                          )
